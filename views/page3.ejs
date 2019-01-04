@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <%- include partials/head %>
+      <link href="./partials/style.css" rel='stylesheet'>
+            <link href="./partials/hangman.css" rel='stylesheet'>
+  <title>HANGMAN</title>
+  <%- include partials/_mobile %>
+
+</head>
+  <body id="bod">
+    <%- include partials/_menu %>
+    <div class="background" id="background">
+
+
+
+
+<div id="container">
+
+<span id="topic"><%= packagee %></span>
+
+<div id="winSpot"></div>
+
+
+<span id="correct"><%= part %></span>
+<div id="SingleLetterOption"><select id="cellPhoneInput">
+<option>A</option>
+<option>B</option>
+<option>C</option>
+<option>D</option>
+<option>E</option>
+<option>F</option>
+<option>G</option>
+<option>H</option>
+<option>I</option>
+<option>J</option>
+<option>K</option>
+<option>L</option>
+<option>M</option>
+<option>N</option>
+<option>O</option>
+<option>P</option>
+<option>Q</option>
+<option>R</option>
+<option>S</option>
+<option>T</option>
+<option>U</option>
+<option>V</option>
+<option>W</option>
+<option>X</option>
+<option>Y</option>
+<option>Z</option>
+</select></div>
+
+
+<h1 id="failedAttemps" style=""></h1>
+
+
+
+
+
+
+<div id="hangMan">
+
+
+
+
+  <div id="HangManRope">
+  <img src="/partials/pictures/rope.gif" id="rope">
+  </div>
+
+<div id="hangManHead">
+<img src="/partials/pictures/head.gif" id="head">
+</div>
+<div id="HangManNeck">
+<img src="/partials/pictures/neck.gif" id="neck">
+</div>
+
+
+
+<div id="hangManTorso">
+
+
+
+
+
+<img class="torso" src="/partials/pictures/arm.gif" id="left"><img class="torso" src="/partials/pictures/body.gif" id="middle"><img id="right" class="torso" src="/partials/pictures/Larm.gif">
+</div>
+
+
+
+
+
+<div id="legs">
+
+
+
+
+
+  <img class="legs" id="leftLeg"  src="/partials/pictures/leg.gif"><img class="legs" id="rightLeg"  src="/partials/pictures/Lleg.gif">
+</div>
+</div>
+</div>
+</div>
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+        </script>
+
+
+        <script type="text/javascript">
+        var bg = document.getElementsByClassName("background")
+      var topic = document.getElementById("topic")
+              var won = document.getElementById("background")
+            var correct = document.getElementById("correct")
+          var head = document.getElementById("head")
+          var left = document.getElementById("left")
+          var middle = document.getElementById("middle")
+          var right = document.getElementById("right")
+          var leftLeg = document.getElementById("leftLeg")
+          var rightLeg = document.getElementById("rightLeg")
+          var neck = document.getElementById("neck")
+          var rope = document.getElementById("rope")
+            var winSpot = document.getElementById("winSpot")
+                           // var winWord = document.getElementById("correct").innerHTML
+              var winWord = correct.innerHTML
+              let letterCount = winWord.length;
+              var progress=[];
+              var width = (100 / letterCount)
+              var high = 100
+              var soFar = document.getElementById("topic")
+              var leftOvers = document.getElementById("failedAttemps")
+              var match = []
+              count = 0
+                    function init(){
+                        for(let i = 0; i < letterCount; i++){
+                          count = count + 200
+                            let letters = winWord.slice(i, i + 1)
+                            let newLetter = document.createElement("div")
+                            setTimeout( ()=>{winSpot.appendChild(newLetter)}, count)
+                            newLetter.setAttribute("value", winWord.charCodeAt(i))
+                            newLetter.setAttribute("class", "puzzle")
+                            newLetter.setAttribute("flex-basis", `${letterCount}%`)
+                            newLetter.setAttribute("innerHTML", ` `)
+                            newLetter.style.width = width
+                            newLetter.style.height = `${high}px`
+                            match.push(letters)
+                          }
+                        }
+                          init()
+                          var puzzle = winSpot.getElementsByClassName("puzzle")
+                          progress = winWord.split()
+                            var losingLetters = []
+                            var count = 0
+                            var failedAttempt = 1
+                            var flag = false
+                          function change(event){
+                            var fail = 1
+                                //letterCount is the number of characters in the winning phrase
+                                var letter=""
+                                letter= String.fromCharCode(event.keyCode)
+                                // letter is the currently guessed character as the client presses a key
+                                var result = document.getElementById("result")
+                                //result is the span that will display the "YOU WIN" message
+                                let failedAttemps;
+                                failedAttemps = document.getElementById("failedAttemps")
+                            for(let i = 0; i <= letterCount; i++){
+                                  let letters = winWord.slice(i, i + 1)
+                                    if(letters === letter){
+                                     count++
+                                    let x = winWord.indexOf(letters)
+                                    puzzle[x].innerHTML=letters
+                                    puzzle[x].style.opacity = ".93"
+                                    let divide = winWord.slice(0, i)
+                                    let leftOver = winWord.slice(i + 1, letterCount)
+                                    winWord = `${divide} ${leftOver}`
+                                         if(count === letterCount  && flag == false){
+                                           setInterval(()=>{strobe()}, 1000)
+          won.style.backgroundImage = 'none'
+          let strobe = function(){won.style.backgroundColor = won.style.backgroundColor == "yellow" ? "pink" : "yellow"}
+           soFar.innerHTML = "Congratulations You Saved the Hangman"
+
+                                       }
+                                    }else{
+                                      fail++
+                                    }
+                                    if(fail > letterCount + 1){
+                                      failedAttempt ++
+                                      console.log("hello")
+                                           leftOvers.innerHTML += letter
+                                           switch (failedAttempt) {
+                                             case 2:
+                                             head.style.visibility = 'visible'
+                                               break;
+                                             case  3:
+                                             left.style.visibility = 'visible'
+                                               break;
+                                             case 4:
+                                             middle.style.visibility = 'visible'
+                                                 break;
+                                             case  5:
+                                             right.style.visibility = 'visible'
+                                                 break;
+                                             case 6:
+                                             leftLeg.style.visibility = 'visible'
+                                                 break;
+                                             case  7:
+                                             rightLeg.style.visibility = 'visible'
+                                                 break;
+                                             case  8:
+                                                 neck.style.visibility = 'visible'
+                                             break;
+                                             case  9:
+                                                     rope.style.visibility = 'visible'
+flag = true
+                                                     leftOvers.innerHTML = "you killed the hangman"
+                                                     soFar.style.display = "none"
+                                                         break;
+                                             default:
+                                           }
+                                      }
+                                                              }
+                              }
+    $("select").change(function () {
+        var str = "";
+        $("select option:selected").each(function(){
+          str += $( this ).text();
+        })
+        var fail = 1
+            //letterCount is the number of characters in the winning phrase
+            var letter=""
+            letter= str
+            // letter is the currently guessed character as the client presses a key
+            var result = document.getElementById("result")
+            //result is the span that will display the "YOU WIN" message
+            let failedAttemps;
+            failedAttemps = document.getElementById("failedAttemps")
+        for(let i = 0; i <= letterCount; i++){
+              let letters = winWord.slice(i, i + 1)
+                if(letters === letter){
+                 count++
+                let x = winWord.indexOf(letters)
+                puzzle[x].innerHTML=letters
+                puzzle[x].style.opacity = ".93"
+                let divide = winWord.slice(0, i)
+                let leftOver = winWord.slice(i + 1, letterCount)
+                winWord = `${divide} ${leftOver}`
+                     if(count === letterCount){
+                       setInterval(()=>{strobe}, 1000)
+                        won.style.backgroundImage = 'none'
+                        let strobe = function(){won.style.backgroundColor = won.style.backgroundColor == "yellow" ? "pink" : "yellow"}
+                        soFar.style.fontSize ='.35em'
+                         soFar.innerHTML = "Congratulations You Saved the Hangman"
+                                    }
+                }else{
+                  fail++
+                }
+                if(fail > letterCount + 1){
+                  failedAttempt ++
+                  console.log("hello")
+                       leftOvers.innerHTML += letter
+                       switch (failedAttempt) {
+                         case 2:
+                         head.style.visibility = 'visible'
+                           break;
+                         case  3:
+                         left.style.visibility = 'visible'
+                           break;
+                         case 4:
+                         middle.style.visibility = 'visible'
+                             break;
+                         case  5:
+                         right.style.visibility = 'visible'
+                             break;
+                         case 6:
+                         leftLeg.style.visibility = 'visible'
+                             break;
+                         case  7:
+                         rightLeg.style.visibility = 'visible'
+                             break;
+                             case  8:
+    neck.style.visibility = 'visible'
+break;
+case  9:
+                             rope.style.visibility = 'visible'
+flag = true
+                             leftOvers.innerHTML = "you killed the hangman"
+                             soFar.style.display = "none"
+                         default:
+                       }
+                  }
+                                          }
+    console.log(letterCount)
+      })
+              window.addEventListener("keydown", change, false)
+    // this function tracks the keys clicked
+            </script>
+
+  </body>
+</html>

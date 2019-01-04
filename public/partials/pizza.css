@@ -1,0 +1,494 @@
+.parent{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px dotted black;
+}
+.main-pizza{
+/* flex-basis: 100%; */
+width:100%;
+height: 100%
+}
+.topping{
+  flex :1;
+  width:100px;
+  height:100px;
+}
+.toppings{
+position: absolute;
+flex-basis:8%;
+bottom: 65%;
+left: 50%;
+visibility: hidden
+}
+.toppings2{
+flex: 1;
+position: absolute;
+flex-basis:8%;
+bottom: 50%;
+left: 60%;
+visibility: hidden
+}
+.toppings3{
+position: absolute;
+flex: 1;
+flex-basis:8%;
+bottom: 65%;
+left: 35%;
+visibility: hidden
+}
+.toppings4{
+position: absolute;
+flex: 1;
+flex-basis:8%;
+bottom: 53%;
+left: 50%;
+visibility: hidden
+}
+.toppings5{
+position: absolute;
+flex: 1;
+flex-basis:8%;
+bottom:65%;
+left: 30%;
+visibility: hidden
+}
+.toppings6{
+flex:1;
+flex-basis:8%;
+position: absolute;
+ bottom: 43%;
+left: 65%;
+visibility: hidden
+}
+.toppings7{
+flex: 1;
+position: absolute;
+ bottom: 68%;
+flex-basis:8%;
+left: 60%;
+visibility: hidden
+}
+.toppings8{
+position: absolute;
+flex: 1;
+ bottom: 44%;
+left: 50%;
+flex-basis:8%;
+visibility: hidden
+}
+.toppings9{
+position: absolute;
+flex: 1;
+ bottom: 75%;
+left: 30%;
+flex-basis:8%;
+visibility: hidden
+}
+.toppings10{
+position: absolute;
+flex: 1;
+bottom: 60%;
+left: 35%;
+flex-basis:8%;
+visibility: hidden
+}
+.toppings11{
+flex:1;
+position: absolute;
+bottom: 71%;
+flex-basis:8%;
+ left: 53%;
+visibility: hidden
+}
+.toppings12{
+flex: 1;
+position: absolute;
+flex-basis:8%;
+bottom: 64%;
+left: 62%;
+visibility: hidden
+}
+.toppings13{
+position: absolute;
+flex: 1;
+bottom: 56%;
+flex-basis:8%;
+ left: 35%;
+visibility: hidden
+}
+.toppings14{
+position: absolute;
+flex-shrink: 1;
+left: 65%;
+bottom: 68%;
+flex-basis:8%;
+visibility: hidden
+}
+.toppings15{
+position: absolute;
+flex-shrink:  1;
+left: 40%;
+bottom: 70%;
+flex-basis:8%;
+visibility: hidden
+}
+.toppings16{
+flex:1;
+position: absolute;
+bottom: 62%;
+left: 43%;
+flex-basis:8%;
+visibility: hidden
+}
+.toppings17{
+flex: 1;
+position: absolute;
+ bottom: 72%;
+left: 63%;
+flex-basis:8%;
+visibility: hidden
+}
+.toppings18{
+position: absolute;
+flex: 1;
+bottom: 70%;
+left: 54%;
+flex-basis:8%;
+visibility: hidden
+}
+.toppings19{
+position: absolute;
+flex-shrink: 1;
+flex-basis:8%;
+left: 30%;
+bottom: 60;
+visibility: hidden
+}
+.toppings20{
+position: absolute;
+flex-shrink : 1;
+left: 20%;
+bottom: 50;
+visibility: hidden
+}
+@media screen and (max-width:700px) {
+.toppings{
+  flex: 1;
+  position: absolute;
+  flex-basis: 4%;
+  bottom: 78%;
+  left: 50%;
+  visibility: hidden
+}
+.main-pizza{
+  flex-basis: 100%
+}
+.topping{
+  flex :1;
+  width:50px;
+  height:50px;
+  bottom: 88%
+}
+.toppings2{
+  flex: 1;
+  position: absolute;
+flex-basis: 4%;
+  bottom: 80%;
+  left: 30%;
+  visibility: hidden
+}
+.toppings3{
+  position: absolute;
+  flex: 1;
+flex-basis: 4%;
+  bottom: 77%;
+  left: 35%;
+  visibility: hidden
+}
+.toppings4{
+  position: absolute;
+  flex: 1;
+  flex-basis: 4%;
+  bottom: 82%;
+  left: 50%;
+  visibility: hidden
+}
+.toppings5{
+  position: absolute;
+  flex: 1;
+flex-basis: 4%;
+  bottom: 75%;
+  left: 30%;
+  visibility: hidden
+}
+.toppings6{
+  flex: 1;
+flex-basis: 4%;
+  position: absolute;
+  bottom: 85%;
+  left: 35%;
+  visibility: hidden
+}
+.toppings7{
+  flex: 1;
+  position: absolute;
+  bottom: 80%;flex-basis: 4%;
+  left: 60%;
+  visibility: hidden
+}
+.toppings8{
+  position: absolute;
+  flex: 1;
+  bottom: 88%;
+  left: 20%;flex-basis: 4%;
+  visibility: hidden
+}
+.toppings9{
+  position: absolute;
+  flex: 1;
+  bottom: 85%;
+  left: 30%;flex-basis: 4%;
+  visibility: hidden
+}
+.toppings10{
+  position: absolute;
+  flex: 1;
+  bottom: 82%;
+  left: 35%;
+flex-basis: 4%;
+  visibility: hidden
+}
+.toppings11{
+  flex: 1;
+  position: absolute;
+  bottom: 88%;flex-basis: 4%;
+  left: 53%;
+  visibility: hidden
+}
+.toppings12{
+  flex: 1;
+  position: absolute;
+flex-basis: 4%;
+  bottom: 74%;
+  left: 62%;
+  visibility: hidden
+}
+.toppings13{
+  position: absolute;
+  flex: 1;
+  bottom: 86%;
+  flex-basis: 4%;
+  left: 35%;
+  visibility: hidden
+}
+.toppings14{
+  position: absolute;
+  flex: 1;
+  bottom: 84%;flex-basis: 4%;
+  left: 53%;
+  visibility: hidden
+}
+.toppings15{
+  position: absolute;
+  flex: 1;
+  flex-basis: 4%;
+  bottom: 77%;
+  left: 38%;
+  visibility: hidden
+}
+.toppings16{
+  flex: 1;
+  position: absolute;
+  bottom: 80%;
+  left: 56%;flex-basis: 4%;
+  visibility: hidden
+}
+.toppings17{
+  flex: 1;
+  position: absolute;
+  bottom: 79%;
+  left: 63%;flex-basis: 4%;
+  visibility: hidden
+}
+.toppings18{
+  position: absolute;
+  flex: 1;
+  bottom: 80%;
+  left: 54%;flex-basis: 4%;
+  visibility: hidden
+}
+.toppings19{
+  position: absolute;
+  flex: 1;
+flex-basis: 4%;
+  bottom: 82%;
+  left: 37%;
+  visibility: hidden
+}
+.toppings20{
+  position: absolute;
+  flex: 1;
+flex-basis: 4%;
+  bottom: 77%;
+  left: 48%;
+  visibility: hidden
+}
+}
+@media screen and (max-height:700px){
+.toppings{
+ flex: 1;
+ position: absolute;
+ flex-basis: 4%;
+ left: 50%;
+ visibility: hidden
+}
+.topping{
+ flex :1;
+ width:50px;
+ height:50px;
+}
+.toppings2{
+ flex: 1;
+ position: absolute;
+flex-basis: 4%;
+
+ left: 60%;
+ visibility: hidden
+}
+.toppings3{
+ position: absolute;
+ flex: 1;
+flex-basis: 4%;
+
+ left: 35%;
+ visibility: hidden
+}
+.toppings4{
+ position: absolute;
+ flex: 1;
+ flex-basis: 4%;
+
+ left: 50%;
+ visibility: hidden
+}
+.toppings5{
+ position: absolute;
+ flex: 1;
+flex-basis: 4%;
+
+ left: 30%;
+ visibility: hidden
+}
+.toppings6{
+ flex: 1;
+flex-basis: 4%;
+ position: absolute;
+
+ left: 65%;
+ visibility: hidden
+}
+.toppings7{
+ flex: 1;
+ position: absolute;
+flex-basis: 4%;
+ left: 60%;
+ visibility: hidden
+}
+.toppings8{
+ position: absolute;
+ flex: 1;
+
+ left: 50%;flex-basis: 4%;
+ visibility: hidden
+}
+.toppings9{
+ position: absolute;
+ flex: 1;
+
+ left: 30%;flex-basis: 4%;
+ visibility: hidden
+}
+.toppings10{
+ position: absolute;
+ flex: 1;
+
+ left: 35%;
+flex-basis: 4%;
+ visibility: hidden
+}
+.toppings11{
+ flex: 1;
+ position: absolute;
+ flex-basis: 4%;
+ left: 53%;
+ visibility: hidden
+}
+.toppings12{
+ flex: 1;
+ position: absolute;
+flex-basis: 4%;
+
+ left: 62%;
+ visibility: hidden
+}
+.toppings13{
+ position: absolute;
+ flex: 1;
+
+ flex-basis: 4%;
+ left: 35%;
+ visibility: hidden
+}
+.toppings14{
+ position: absolute;
+ flex: 1;
+flex-basis: 4%;
+ left: 53%;
+ visibility: hidden
+}
+.toppings15{
+ position: absolute;
+ flex: 1;
+ flex-basis: 4%;
+
+ left: 38%;
+ visibility: hidden
+}
+.toppings16{
+ flex: 1;
+ position: absolute;
+
+ left: 56%;flex-basis: 4%;
+ visibility: hidden
+}
+.toppings17{
+ flex: 1;
+ position: absolute;
+
+ left: 63%;flex-basis: 4%;
+ visibility: hidden
+}
+.toppings18{
+ position: absolute;
+ flex: 1;
+
+ left: 54%;flex-basis: 4%;
+ visibility: hidden
+}
+.toppings19{
+ position: absolute;
+ flex: 1;
+flex-basis: 4%;
+
+ left: 37%;
+ visibility: hidden
+}
+.toppings20{
+ position: absolute;
+ flex: 1;
+flex-basis: 4%;
+
+ left: 48%;
+ visibility: hidden
+}

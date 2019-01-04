@@ -1,0 +1,165 @@
+$color: #326496;
+// bluish
+$primary: #174D2A;
+// forest green
+$new : #31A1A8;
+// blue
+$white : #475780;
+// greypurple
+$brr:#BEE1CA;
+// smokeygreen
+$okay:#7CACDE;
+// lavender
+$bam:#311EAF;
+// purple
+$shadow:#BBC6E1;
+// lightblue
+$jek:#CCBBE1;
+// lightpink
+$bran:#A0EFBC;
+// lightgreen
+$fonts:"Trebuchet MS", Helvetica, sans-serif;
+
+#buttonWar {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  background: #174D2A;
+  color: #CCBBE1; }
+
+.myWarButton {
+
+  color: #CCBBE1;
+  font-size: 12px;
+  line-height: 23px;
+  padding: 13px;
+  border-radius: 22px;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-weight: 700;
+  text-decoration: none solid #444444;
+  font-style: normal;
+  font-variant: small-caps;
+  text-transform: capitalize;
+  background-image: radial-gradient(at center center, #1c6ea4 0%, #2388cb 60%, #144e75 100%);
+  box-shadow: black 19px 16px 52px 11px;
+  border: 2px dashed #1c6ea4;
+  width: 12em;
+  height: 3em;
+  padding: .5px;
+  text-align: center; }
+
+.myWarButton:hover {
+  border: 2px dashed #CCBBE1; }
+
+.myWarButton:active {
+  background: #CCBBE1; }
+
+.buttons {
+  width: 400px;
+  height: 400px;
+  background: transparent;
+  display: inline-block;
+  position: relative;
+  padding: 20px 38px;
+  top: 0;
+  font-size: 30px;
+  font-family: 'Open Sans', Helvetica;
+  border-radius: 4px;
+  border-bottom: 1px solid rgba(28, 227, 125, 0.5);
+  background: #16e689;
+  color: #fff;
+  box-shadow: 0px 0px 0px rgba(15, 165, 60, 0.1); }
+
+.pictureFun {
+  display: block;
+  width: 300px;
+  margin: 0 auto;
+  opacity: 0;
+  transition: all 200ms ease-in; }
+
+.js-pictureFun-animate {
+  opacity: 1;
+  animation: pictureFun-jiggle 250ms linear; }
+
+.unit {
+  width: 400px;
+  margin: 0 auto; }
+
+.hover-box {
+  display: block;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 0 4px 10px #7CACDE; }
+
+.hover-box:hover {
+  box-shadow: 0 0 4px 20px; }
+
+.hover-box img {
+  display: block;
+  width: 100%; }
+
+.hover-box h2 {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: white;
+  border-radius: 50%;
+  margin: 0;
+  color: #CCBBE1;
+  text-align: center;
+  font-size: 3rem;
+  transform: scale(0);
+  transition: all 200ms ease-out; }
+
+.hover-box:hover h2 {
+  transform: scale(1); }
+
+.hover-box span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+#pie {
+  display: flex; }
+
+#pizzaContainer {
+  margin: 0 auto; }
+
+.pizzaParent {
+  display: flex;
+  border-radius: 50%;
+  overflow: hidden; }
+
+.pizzaParent img {
+  width: 100%; }
+
+.pizzaPie {
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  border-radius: 50%;
+  margin: 0;
+  color: #CCBBE1;
+  text-align: center;
+  font-size: 3rem;
+  transform: scale(0); }
+
+#pizzaConfirm {
+  clear: both;
+  font-size: 1.8em;
+  font-style: "Trebuchet MS", Helvetica, sans-serif;
+  color: #326496;
+  font-style: oblique; }
+
+@keyframes pictureFun {
+  0% {
+    transform: rotate(0); }
+  33% {
+    transform: rotate(15deg); }
+  66% {
+    transform: rotate(-15deg); }
+  100% {
+    transform: rotate(0); } }

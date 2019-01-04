@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+      <%- include partials/head %>
+<%- include partials/_mobile %>
+      <link href="./partials/menu.css" rel='stylesheet'>
+      <link href="./partials/warrr.css" rel='stylesheet'>
+
+  <title>Button War</title>
+<%- include partials/_menu %>
+</head>
+
+  <body id="buttonWar">
+<div class="background">
+<img src="./partials/pictures/atomBomb.png" id="picWave" style="flex:1;display:none;flex-basis:100%;position:absolute;flex-shrink:2;height:100%; width:100%; opacity: 0.75; z-index:2">
+<img src="./partials/pictures/battle.jpg" class="front" style="flex:1;flex-basis:100%;height:100%;position:absolute; width:100%;z-index: 1">
+
+
+
+
+<br>
+
+<section id="bombSection">
+    <div id="buttonWrap">
+<br>
+
+
+      <img style="display:none;flex-basis:7%;right:34%;position:absolute; opacity: .3" src="./partials/pictures/gren.gif" id="blast">
+   </div>
+</section>
+<section id = "buttonControls">
+  <div  id="butt1" class="myWarButton" >1</div>
+
+      <div id="butt4"  class="myWarButton">3</div>
+
+</section>
+<div style="display:inline-block">
+<div id="butt3"  class="unit" style="position:absolute;bottom:30px">
+     <a  class="hover-box" href="#">
+       <img style="position:relative; flex:1;z-index:4"src="./partials/pictures/landmine.jpg">
+       <h2 style="background-image:url('./partials/pictures/explode2.png');background-repeat:no-repeat;z-index:4">boom</h2>
+     </a>
+</div>
+</div>
+</div>
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+        </script>
+        <script type="text/javascript">
+        var backk = document.getElementById("buttonWar");
+        var y
+change= function(x){
+var y = x + 1
+return y
+  }
+$('#butt1').click(()=>{
+  let newTime = 100;
+  $('#picWave').fadeIn(10000);
+  $(".front").css("display", "none");
+  for(let r = 100;r < 255; r++){
+  setTimeout(function(){
+    newTime = newTime + 1000;
+    p = change(newTime);
+    change(p)
+    console.log(p)
+    console.log(`rgb(${r},${r},${r})`)
+      backk.style.backgroundColor = `rgb(${r},${r},${r})`;
+  }, r * 100)
+}
+}
+)
+
+function killButton(){
+    $('#butt1').animate({"right": "100px","opacity":".3"})
+  }
+  $('#butt4').click(killButton);
+        </script>
+  </body>
+</html>

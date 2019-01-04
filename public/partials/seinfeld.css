@@ -1,0 +1,142 @@
+
+
+.background{
+  display: flex;
+  width:100%;
+  height: 800px;
+  position: absolute;
+  z-index: 1;
+text-align: center;
+align-items:center;
+top:75px
+}
+.wallPaper{
+  flex:1;
+  background-image: url('/partials/pictures/lobby.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width:100%;
+  height: 100%;
+  position: relative;
+}
+.floorRug{
+  flex: 1;
+  background-image: url('/partials/pictures/floor.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width:100%;
+  height: 60%;
+  top:58.5%;
+  position: relative;
+  text-align: center;
+  font-size: 3em
+}
+#floorPanel{
+  display: flex;
+  position: absolute;
+   align-items: center;
+   width:50%;
+   flex-direction: column;
+   bottom: 72%;
+text-align: center;
+height:25%;
+margin: 1em;
+margin-left:7.5em
+}
+
+#floor{
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding: .5em;
+  background-color: black;
+  color: white;
+  flex:1;
+  width: 4em;
+  border:10px dashed yellow;
+  font-size:1.4em;
+  z-index: 3;
+
+}
+
+
+#story{
+  flex:1;
+  margin: 2%;
+  color: rgba(122,95,50);
+  flex-basis: 20%;
+
+  z-index: 4;
+  padding: 4%
+
+}
+
+#doors{
+  flex:1;
+  display: inline-block;
+position: relative;
+  text-align:  center;
+  margin-top:  1EM;
+  width: 180px;
+height: 325px;
+
+}
+#opened{
+
+  z-index: 3;
+  position: relative;
+  width:180px;
+  height: 325px;
+top: 0%;
+  background-color: transparent;
+
+
+}
+
+#jiff{
+  z-index: 3;
+  position: absolute;
+  width:180px;
+  height: 325px;
+top: 0%;
+right: 0px
+}
+
+ #door1{
+   width:90px;
+   height: 325px;
+   position: absolute;
+right: 90px;
+margin-right: 0%;
+   border:1px solid black;
+   background-color: grey;
+   z-index: 4;
+
+ }
+
+ #door2{
+
+  width:90px;
+height: 325px;
+  /* left: 50%;
+   top: 50%; */
+   margin-left: 0%;
+     position: relative;
+right:0px;
+  border:1px solid black;
+  background-color: grey;
+  z-index: 4;
+right: -90px
+ }
+
+@media screen and (max-width:800px){
+  .background{
+    display: flex;
+    width:100%;
+    height: 800px;
+    position: absolute;
+    z-index: 1;
+  text-align: center;
+  align-items:center;
+top:25px
+  }
+}

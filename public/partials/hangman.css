@@ -1,0 +1,223 @@
+
+/* .background{
+  display: flex;
+  background-image: url("/partials/pictures/wild-West.jpg");
+  z-index: 1;
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  top:200px
+} */
+
+.background{
+  display:flexbox;
+  z-index: 3;
+  height: 1200px;
+  width:100%;
+  position:absolute;
+  background-image: url('/partials/pictures/wild-West.jpg');
+  top:90px
+}
+#failedAttemps{
+  flex:1;
+  height:10%;
+  text-align:center;
+  font-size:60px
+}
+#soFar{
+flex:1
+}
+#topic{
+  color:white;
+  font-size: 2em;
+  position: relative;
+}
+#winSpot{
+  display: flex;
+  flex-direction: row;
+  font-size: 2em;
+  text-align: center;
+position: relative;
+  /* height: 100%;
+  width: 100%; */
+  height: 200px;
+  width: 100%;
+  border: 3px solid red;
+  background-image: url('/partials/pictures/skulls.jpg');
+
+  z-index: 3
+}
+#container{
+  width:100%;
+  top:100px;
+  flex:1
+}
+#result{
+  flex:1;
+  width:400px;
+  text-align:center;
+  font-size:60px
+}
+.puzzle{
+  width: 100%;
+  position: relative;
+  flex:1;
+  flex-basis: 20%;
+  z-index: 3;
+  background-color: white;
+  border: 3px solid orange;
+  opacity:.3;
+
+}
+
+#failedAttemps{
+color:white;
+font-size: 1em;
+height:10%;
+position: relative;
+}
+
+#hangMan{
+  display: flex;
+  flex-direction: column;
+    align-items: center;
+}
+
+#hangManHead{
+  flex:1;
+  /* visibility: hidden */
+}
+.torso{
+  flex:1
+}
+#hangManTorso{
+  display: flex;
+  align-items: center;
+}
+#legs{
+  display:flex
+}
+.legs{
+  flex:1
+}
+
+#neck{
+  visibility: hidden;
+}
+
+#rope{
+  visibility: hidden;
+}
+#head{
+  visibility: hidden;
+}
+#left{
+visibility: hidden;
+}
+#middle{
+  visibility: hidden;
+}
+#right{
+  visibility: hidden;
+}
+#leftLeg{
+  visibility: hidden;
+}
+#rightLeg{
+  visibility: hidden;
+}
+#correct{
+  visibility: hidden;
+  display: inline;
+  font-size: .1em
+}
+
+#SingleLetterOption{
+  display:none;
+position:relative;
+z-index: 3
+}
+
+
+
+#category{
+  text-align: center;
+  font-size: 2em;
+  font-style: oblique;
+  color: blue;
+  position: absolute;
+  height: 10%
+}
+
+@media screen and (max-width:800px){
+  /* .background{
+    display: flex;
+    flex-direction:row;
+    width:100%;
+    height: 800px;
+    position: absolute;
+    z-index: 1;
+  text-align: center;
+  align-items:center;
+  top:25px
+  } */
+  #failedAttemps{
+  color:white;
+  font-size: .69em;
+  position: relative;
+  }
+  #category{
+    flex: 1;
+    text-align: center;
+    font-size: .7em;
+    font-style: oblique;
+    color: white;
+    position: absolute;
+    height: 3%;
+  }
+  #SingleLetterOption{
+    display:flex;
+    align-items: center;
+z-index: 3
+  }
+    #cellPhoneInput{
+      flex:3;
+      flex-basis: 34%;
+      z-index: 4
+    }
+    #bod{
+    }
+    #container{
+
+      top:25px
+    }
+    #winSpot{
+      top: 25px
+    }
+#topic{
+display:flexbox;
+height: 2%;
+}
+#container{
+  flex:1;
+  height
+  font-size: .4%
+}
+#failedAttemps{
+  flex:1;
+  height:3%;
+  text-align:center;
+  font-size:10px
+}
+    .background{
+      background-image: url("/partials/pictures/wild-West.jpg");
+      z-index: 1;
+      background: maroon;
+      position: absolute;
+      background-size: cover;
+      background-repeat: no-repeat;
+      top:25px;
+      height: 500px;
+      width:100%
+    }
+}

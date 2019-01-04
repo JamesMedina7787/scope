@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <%- include partials/head %>
+       <!-- <link href="./partials/style.css" rel='stylesheet'> -->
+       <link href="./partials/seinfeld.css" rel='stylesheet'>
+
+
+
+
+<!-- apiKey JzhRtkqhBPU0Kqw7o4I9pAJGCyz36B8r -->
+    <title>Seinfeld Elevator Lobby</title>
+
+      <%- include partials/_mobile %>
+      <%- include partials/_menu %>
+  </head>
+  <body>
+
+      <div class='background'>
+<div class="wallPaper">
+  <div id="floorPanel">
+
+      <div id="floor"></div>
+      <div id="doors">
+
+<div id="opened">
+<img id="jiff">
+  <div id="door1">
+  </div>
+  <div id="door2">
+  </div>
+
+</div>
+
+
+</div>
+</div>
+<div class="floorRug"><span id="story"></span></div>
+
+
+
+</div>
+</div>
+  </body>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+  </script>
+  <script type="text/javascript">
+  var jiffs = "https://api.giphy.com"
+  var endpoint = "/v1/gifs/search"
+  var apiKey = "&api_key=JzhRtkqhBPU0Kqw7o4I9pAJGCyz36B8r"
+  var mailman = "?q=newman+seinfeld"
+  var george = "?q=george+seinfeld"
+  var cosmo = "?q=kramer+seinfeld"
+  var elaine = "?q=elaine+seinfeld"
+  var seinfeld = "?q=jerry+seinfeld"
+  var limit = "&limit=40"
+ var fullPath = "https://api.giphy.com/v1/gifs/search?q=seinfeld&api_key=JzhRtkqhBPU0Kqw7o4I9pAJGCyz36B8r"
+
+
+function gif(query){
+    var xhr = $.get(`${jiffs}${endpoint}${query}${limit}${apiKey}`)
+  xhr.done(function(response){
+    var randomNumber = Math.random();
+    var len = 40;
+    var wordPick = (randomNumber * len) + 1;
+    var finishedNumb = Math.floor(wordPick);
+  var url = response.data[finishedNumb].images.original.url
+   $("#jiff").attr("src", url)
+});
+}
+
+  var floor = 1
+var count = 1
+var floorNumber = document.getElementById("floor")
+var storyLine = document.getElementById("story")
+floorNumber.innerHTML= 1
+storyLine.innerHTML= `A day 'in the lobby of the Seinfeld Building`
+class Actors{
+  constructor(name, classFloor, api){
+    this.name = name,
+    this.classFloor = classFloor
+    this.api = api
+  }
+
+    elevatorRide(){
+
+      if(floor < this.classFloor){
+        floor++
+         storyLine.innerHTML=`${this.name} is on his way to the ${this.classFloor}'th floor`
+
+        floorNumber.innerHTML = floor
+        // floorNumber.innerHTML =floor
+         return
+       }else if(floor == this.classFloor){
+         storyLine.innerHTML= `${this.name} has arrived on floor ${this.classFloor}`
+         return
+       }
+    }
+
+  show(){
+  gif(this.api)
+  }
+
+    ride(){
+      for(var i= 0; i < this.classFloor; i++){
+        count = count + 1000;
+        setTimeout(()=>{this.elevatorRide()}, count)
+      }
+    }
+
+    elevateDown(){
+      for(var i= this.classFloor; i > 0; i--){
+        count = count + 1000;
+        setTimeout(()=>{this.elevatorDown()}, count)
+      }
+    }
+
+ elevatorDown(){
+   floorNumber.innerHTML = floor
+    storyLine.innerHTML=`The elevator is on it's way to the lobby`
+    floor--
+   }
+ }
+
+
+
+
+ function open(){
+
+      $("#door1").animate({
+          marginRight: "50%"
+      })
+      $("#door2").animate({
+          marginLeft: "50%"
+      })
+}
+
+function close(){
+      $("#door1").animate({
+          marginRight: "0%"
+      })
+      $("#door2").animate({
+          marginLeft: "0%"
+      })
+   }
+
+
+
+
+const jerry = new Actors("Jerry", 4, seinfeld)
+const kramer = new Actors("Kramer", 10, cosmo)
+const newman = new Actors("Newman", 3, mailman)
+
+
+
+count = 1000
+
+setTimeout( ()=>{storyLine.innerHTML="Kramer enters the lobby, and calls the elevator"
+kramer.show()
+}, count)
+setTimeout(()=>{open()}, count)
+count = count + 3000
+setTimeout(()=>{close()}, count)
+count = count + 1000
+setTimeout( ()=>{storyLine.innerHTML="Kramer leaves the lobby and boards the elevator, on his way to floor 10"
+kramer.show()}, count)
+kramer.ride()
+count = count + 3000
+setTimeout(()=>{open()}, count)
+count = count + 3000
+setTimeout(()=>{close()}, count)
+count = count + 1000
+setTimeout(()=>{storyLine.innerHTML="Kramer leaves the elevator, sits in his apartment, and lights a cigar"
+jerry.show()}, count)
+count = count + 3000
+setTimeout(()=>{storyLine.innerHTML="Jerry enters the lobby, and presses the button for the elevator"}, count)
+count = count + 3000
+kramer.elevateDown()
+count = count + 3000
+setTimeout(()=>{open()}, count)
+count = count + 3000
+setTimeout(()=>{close()}, count)
+count = count + 1000
+setTimeout(()=>{storyLine.innerHTML="Jerry boards the elevator and presses the button for floor 4"
+jerry.show()}, count)
+count = count + 3000
+jerry.ride()
+count = count + 3000
+setTimeout(()=>{open()}, count)
+count = count + 3000
+setTimeout(()=>{close()}, count)
+count = count + 3000
+setTimeout(()=>{storyLine.innerHTML="Jerry Leaves the Elevator, goes Back to his place, and open's a beer"
+newman.show()}, count)
+count = count + 3000
+setTimeout(()=>{storyLine.innerHTML="Newman enters the lobby and waits next to Elain, who called the elevator down already"}, count)
+count = count + 3000
+jerry.elevateDown()
+count = count + 3000
+setTimeout(()=>{open()}, count)
+count = count + 3000
+setTimeout(()=>{close()}, count)
+count = count + 1000
+setTimeout(()=>{storyLine.innerHTML="Newman and Elain Board the elevator together"
+newman.show()}, count)
+count = count + 3000
+setTimeout(()=>{storyLine.innerHTML="Newman asks Elain to come back to his place while in the elevater, she agrees to"}, count)
+count = count + 3000
+newman.ride()
+count = count + 3000
+setTimeout(()=>{open()}, count)
+count = count + 3000
+setTimeout(()=>{close()}, count)
+count = count + 1000
+setTimeout(()=>{storyLine.innerHTML="Elain goes back to Newman's place with him"}, count)
+  </script>
+</html>

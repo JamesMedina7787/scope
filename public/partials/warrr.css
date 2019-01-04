@@ -1,0 +1,283 @@
+body{
+  background-color: rgb(100,100,100)
+}
+
+.myWarButton {
+  flex:3;
+  color: #CCBBE1;
+  font-size: 20px;
+  line-height: 23px;
+
+  border-radius: 22px;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-weight: 700;
+  text-decoration: none solid #444444;
+  font-style: normal;
+  font-variant: small-caps;
+  text-transform: capitalize;
+  background-image: radial-gradient(at center center, #1c6ea4 0%, #2388cb 60%, #144e75 100%);
+  box-shadow: black 19px 16px 52px 11px;
+  border: 2px dashed #1c6ea4;
+  width: 50%;
+  height: 50%;
+
+  padding: 70px;
+  text-align: center; }
+
+.myWarButton:hover {
+  border: 2px dashed #CCBBE1; }
+
+.myWarButton:active {
+  background: #CCBBE1; }
+
+#warScene{
+display: flex;
+flex-wrap:wrap;
+}
+.background {
+font-family: "Trebuchet MS", Helvetica, sans-serif;
+
+color: black;
+
+}
+
+#flex{
+display: flex;
+flex-direction: column;
+}
+.bombSection{
+flex:1;
+border: 1px solid black;
+flex-basis: 25%;
+background-image:url('/partials/pictures/battle.jpg');
+background-repeat:no-repeat;
+
+ background-color:"black";
+
+}
+#buttonControls{
+display: flex;
+position: absolute;
+flex-direction: row;
+
+margin: 13px;
+padding: 13px;
+z-index: 3;
+left:0%;
+top: 88%;
+/* border: 1px solid black */
+}
+#butt1{
+flex:1;
+flex-basis: 100%
+}
+#butt2{
+flex:1;
+flex-basis: 100%
+}
+#butt3{
+
+
+}
+#butt4{
+flex:1;
+flex-basis: 25%
+}
+#square{
+  flex:1;
+  position:relative;
+  flex-shrink:2;
+  width:3%;
+  right:10px
+}
+
+
+/* grenade picture series */
+#square{
+width: 200px
+}
+#blast{
+width: 200px
+}
+
+/* grenade picture series */
+
+.unit {
+width: 250px;
+margin: 0 auto; }
+
+.hover-box {
+display: inline-block;
+border-radius: 50%;
+overflow: hidden;
+position: relative;
+box-shadow: 0 0 4px 10px #7CACDE; }
+
+.hover-box:hover {
+box-shadow: 0 0 4px 20px; }
+
+.hover-box img {
+display: block;
+width: 100% }
+
+.hover-box h2 {
+position: absolute;
+top: 0px;
+bottom: 0px;
+left: 0px;
+right: 0px;
+background-color: white;
+border-radius: 50%;
+margin: 0;
+color: #CCBBE1;
+text-align: center;
+font-size: 3rem;
+transform: scale(0);
+transition: all 200ms ease-out; }
+
+.hover-box:hover h2 {
+transform: scale(1); }
+
+.hover-box span {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%); }
+}
+#bombSection{z-index: 3}
+
+
+
+@media screen and (max-width:800px){
+#buttonWar{
+top:25px;
+background: rgb(100,100,100);
+}
+  .background{
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    color: black;
+    display: flex;
+    width:100%;
+    /* height: 800px; */
+    position: absolute;
+    height:900px;
+    z-index: 1;
+  text-align: center;
+  align-items:center;
+  top:25px
+  }
+
+#butt1{
+  flex:1;
+  flex-basis: 100%
+}
+#butt2{
+  flex:1;
+  flex-basis: 100%
+}
+#butt3{
+  display: none;
+  flex-basis: 100%
+}
+#butt4{
+  flex:1;
+  flex-basis: 100%
+}
+/* grenade picture series */
+#square{
+width: 200px
+
+}
+#blast{
+width: 200px
+}
+#flex{
+display: flex;
+}
+/* grenade picture series */
+
+.unit {
+  margin: 0 auto;
+width: 260px;
+height:auto;
+z-index: 3}
+
+  .hover-box {
+    display: block;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 4px 10px #7CACDE; }
+
+  .hover-box:hover {
+    box-shadow: 0 0 2px 5px; }
+
+  .hover-box img {
+width:100%;
+   }
+
+
+  .hover-box h2 {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: white;
+    border-radius: 50%;
+    margin: 0;
+    color: #CCBBE1;
+    width: 100%;
+    text-align: center;
+    font-size:2rem;
+    transform: scale(0);
+    transition: all 200ms ease-out; }
+
+  .hover-box:hover h2 {
+    transform: scale(1); }
+
+  .hover-box span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
+    .myWarButton {
+display:block;
+      color: #CCBBE1;
+      font-size: 12px;
+      line-height: 3em;
+      padding: 4%;
+      border-radius: 5%;
+      font-family: "Trebuchet MS", Helvetica, sans-serif;
+      font-weight: 700;
+      text-decoration: none solid #475780;
+      font-style: normal;
+      font-variant: small-caps;
+      text-transform: capitalize;
+      background-image: radial-gradient(at center center, #1c6ea4 0%, #2388cb 60%, #144e75 100%);
+      box-shadow: black .5%;
+      border: .5px dashed #1c6ea4;
+flex-basis: 15%;
+      height: 13%;
+      left:10%;
+      padding: .5px;
+      text-align: center; }
+
+    .myWarButton:hover {
+      border: 2px dashed #CCBBE1; }
+
+    .myWarButton:active {
+      background: #CCBBE1; }
+#buttonControls{
+  flex:1;
+  position: relative;
+   flex-direction: row;
+   width:100%;
+flex-basis: 100%;
+height: 500px;
+z-index:4;
+top:69%;
+right:4%
+}
+}

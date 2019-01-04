@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+       <!-- <link href="./partials/italy.css" rel='stylesheet'> -->
+              <link href="./partials/style.css" rel='stylesheet'>
+       <%- include partials/head %>
+       <!-- <link href="./partials/PizzaWar.css" rel='stylesheet'> -->
+    <title>Pizza Delivery</title>
+      <%- include partials/_mobile %>
+  </head>
+  <body id="pizza">
+
+<%- include partials/_menu %>
+  <div class="background">
+
+    <h1 class="text-center">Pizza Order Form</h1>
+    <!-- <form method="POST" action="/register"> -->
+    <form method="POST" action="page5">
+
+
+    <div class="form-row">
+      <div class="col-md-4 mb-3">
+        <!-- <label for="validationCustom01">Name</label> -->
+        <!-- <input type="text" class="form-control" id="name" placeholder="name"  name="name"> -->
+      </div>
+    </div>
+
+
+    <fieldset>
+      <div class="col-md-4 mb-3">
+        <label id="schedule-text" for="validationCustomUsername" style="opacity:.9; width:100px;color:black">Name</label>
+        <div class="input-group">
+          <div class="input-group-prepend">
+          </div>
+          <input type="text" class="form-control" name="username"  id="name" placeholder="Username">
+        </div>
+      </div>
+</fieldset>
+
+
+
+<div class="form-row">
+<div  id='header-out' class="col-md-3 mb-3">
+    <fieldset>
+<span id="pizza"  style="color:black" >Pizza:</span>
+<select id="options" name="options">
+  <option value="small">Small</option>
+  <option value="medium">Medium</option>
+  <option value="large">Large</option>
+</select>
+</fieldset>
+</div>
+</div>
+<div class="form-row">
+    <div id='header-out' class="col-md-3 mb-3">
+    <fieldset>
+<span id="Qty" style="color:black">Qty:</span>
+<select id="number" name="number">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+</select>
+</fieldset>
+</div>
+</div>
+
+    <fieldset>
+<div id='header-reg' class="form-group">
+  <div class="col-md-3 mb-3">
+    <div id="toppings" >
+       <label id="schedule-text" class="list" style="clear:both">pepperoni<input type="radio"  class="pizzaRadio"style="clear:both" value="pepperoni" id="pepperonis" name="pepperoni" style="display:inline-block;float:right"></label>
+            </div>
+            <div id="toppings" >
+   <label id="schedule-text"class="list">Mushrooms<input type="radio" class="pizzaRadio" value="Mushrooms" id="mushroom" name="mushrooms">
+ </label> </div>
+ <div id="toppings" >
+   <label id="schedule-text"class="list">Anchovies<input type="radio" class="pizzaRadio" value="Anchovies" id="anchovie" name="anchovies"></label>
+ </div>
+ <div id="toppings">
+    <label id="schedule-text"class="list">Pineapples<input type="radio" class="pizzaRadio" value="Pineapples" id="pineapple" name="pineapples"></label>
+  </div>
+  <div id="toppings" >
+      <label id="schedule-text" class="list">Onions<input type="radio" class="pizzaRadio" value="Onion" id="onion" name="onions"></label>
+    </div>
+</div>
+</div>
+</fieldset>
+
+    <fieldset>
+
+
+</fieldset>
+
+
+    <fieldset id='header-reg'>
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <label id="schedule" for="validationCustom03" style="opacity:.9;color:black">Order Status</label>
+            <div id="result" style="backgroundColor:red;color:black;"></div>
+        </div></div>
+
+</fieldset
+
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script> -->
+<button id="button" type="submit" class="buttons">Order</button>
+</form>
+</div>
+</div>
+  </body>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript">
+  var mushroom = document.getElementById("pepperonis")
+
+
+  $("#button").click(function(){
+
+    let quantity = $("#number :selected").val()
+    let pizzaa = $('#options :selected').val()
+    if (quantity < 2){
+    $("#result").html(`you ordered 1 ${pizzaa} pizza <br>`)
+  }else{
+    $("#result").html(`you ordered ${quantity} ${pizzaa} pizza's <br>`)
+  }
+  })
+
+
+
+function slick(){
+  $(this).animate({"opacity":"1", "margin-left": "2em"})
+}
+function slickOut(){
+  $(this).animate({"opacity":".63", "marginLeft": "0em"})
+}
+function saturate(){
+  $("#result").html(`you ordered ${this.children[0].value}`)
+  $(this).css({"backgroundColor":"green","color":"red"})
+}
+
+function newChoice(){
+
+}
+$(".list").hover(slick, slickOut)
+$(".list").click(saturate)
+  </script>
+
+</html>

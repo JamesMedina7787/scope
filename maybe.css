@@ -1,0 +1,53 @@
+/*
+Error: Invalid CSS after "  width": expected ";", was ": 100%;"
+        on line 5 of yeah.scss
+
+1: ul{
+2:   margin: 0px;
+3:   padding: 0px;
+4:   list-style: none
+5:   width: 100%;
+6: 
+7: 
+8: li{
+9:   position: relative;
+10:   display: flex-box;
+
+Backtrace:
+yeah.scss:5
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:1278:in `expected'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:1208:in `expected'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:1203:in `tok!'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:804:in `block in try_declaration'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:1254:in `rethrow'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:809:in `try_declaration'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:732:in `declaration_or_ruleset'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:697:in `block_child'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:689:in `block_contents'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:678:in `block'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:670:in `ruleset'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:696:in `block_child'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:686:in `block_contents'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:137:in `stylesheet'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:41:in `parse'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/engine.rb:414:in `_to_tree'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:209:in `each'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:294:in `watch'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/plugin.rb:109:in `method_missing'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/exec/sass_scss.rb:360:in `watch_or_update'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/exec/sass_scss.rb:51:in `process_result'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/exec/base.rb:52:in `parse'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/exec/base.rb:19:in `parse!'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/bin/sass:13:in `<top (required)>'
+/usr/local/bin/sass:22:in `load'
+/usr/local/bin/sass:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"  width\": expected \";\", was \": 100%;\"\A         on line 5 of yeah.scss\A \A 1: ul{\A 2:   margin: 0px;\A 3:   padding: 0px;\A 4:   list-style: none\A 5:   width: 100%;\A 6: \A 7: \A 8: li{\A 9:   position: relative;\A 10:   display: flex-box;"; }

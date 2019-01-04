@@ -1,0 +1,43 @@
+<link href="./partials/menu.css" rel='stylesheet'>
+
+<div id="menuCollapsed">
+<div id="shrunkMenu">MENU</div>
+</div>
+<div style="display:flex;text-align:center;flex-direction:row">
+<nav class="mainMenu" >
+
+
+    <ul class="mainMenu">
+      <li><a href="page1">Button War</a></li>
+      <li><a href="page3">HangMan</a></li>
+      <li><a href="page5">Pizza Delivery</a></li>
+      <!-- <li><a href="page6">Drink Calculator</a></li> -->
+      <li><a href="page9">Seinfeld Elevator Lobby</a></li>
+    </ul>
+
+</nav>
+</div>
+
+<nav class="smallMainMenu" id="closed">
+
+
+    <ul class="smallMainMenu">
+      <li ><a  href="page1">Button War</a></li>
+      <li><a href="page3">HangMan</a></li>
+      <li><a  href="page5">Pizza Delivery</a></li>
+      <!-- <li><a href="page6">Drink Calculator</a></li> -->
+      <li><a href="page9">Seinfeld Elevator Lobby</a></li>
+    </ul>
+
+</nav>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+
+    $('#menuCollapsed').on('click',function(){
+      $("#closed").toggle()
+      $(".background").css('top','130px')
+      $("#menuCollapsed").hide()
+  })
+    </script>
