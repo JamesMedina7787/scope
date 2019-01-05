@@ -22,6 +22,10 @@
 
 #### Seinfeld elevator lobby was an exercise that we were assigned to teach us how to use the setTimeout function
 
-+ I really enjoyed this assignment. It was simply a console output at first. We had just learn to do objects with javascript. I decided to make it into an entire story line. After I graduated I made it into a page. I added the elevator doors. Then the rug and the walls. Finally I put an API connection to Giphy. 
++ I really enjoyed this assignment. It was simply a console output at first. We had just learn to do objects with javascript. I decided to make it into an entire story line. After I graduated I made it into a page. I added the elevator doors. Then the rug and the walls. Finally I put an API connection to Giphy.
+
+#### Pizza Delivery was an assignment that we did as we learned Jquery
+
++ The assignment was to make a pizza delivery form. The client enters details about they're pizza delivery. They are given a description of the order upon hitting the order button. I routed the end result to submit an object to another page. This page has a pizza on it. On the pizza was scattered pictures of the toppings that the client requested. It was incredibly challenging to keep the toppings spread out inside the perimeter of the pizza picture. I had to play with the CSS quite a bit to get a good and working result. 
 
 ### Graduated on June 28th
