@@ -22,6 +22,6 @@
 
 #### Seinfeld elevator lobby was an exercise that we were assigned to teach us how to use the setTimeout function
 
-+ I really enjoyed this assignment. It was simply a console output. We had just learn to do objects with javascript. I decided to make it into an entire story line. After I graduated I made it into a page. I added the elevator doors. Then the rug and the walls. Finally I put an API connection to Giphy. 
++ I really enjoyed this assignment. It was simply a console output at first. We had just learn to do objects with javascript. I decided to make it into an entire story line. After I graduated I made it into a page. I added the elevator doors. Then the rug and the walls. Finally I put an API connection to Giphy. 
 
 ### Graduated on June 28th
