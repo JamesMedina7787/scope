@@ -6,6 +6,7 @@
 
   #menuCollapsed {
     display:flex;
+    z-index: 50
 }
 
   #shrunkMenu{
@@ -16,7 +17,8 @@
    position: fixed;
    padding:1px;
     background-image: url('/partials/pictures/menu.png');
-  z-index: 1
+  z-index: 50;
+  background-color: white;
   }
 
    .smallMainMenu {
@@ -25,7 +27,7 @@
     flex-direction: column;
     width: 100%;
     height:130px;
-
+    z-index: 50;
     text-shadow: 0.01px 0.01px 0px #7CACDE;
     box-shadow: 0.01px 0.01px 0.01px #BEE1CA;
     padding: .01px .030px;
@@ -38,6 +40,7 @@
     background: -ms-linear-gradient(top, #63B8EE, #BBC6E1);
    }
    .smallMainMenu a {
+     z-index: 50;
     flex:1;
     color: #CCBBE1;
     text-decoration: none;
@@ -72,33 +75,33 @@
 .mainMenu{
   background-color: black;
 display:flex;
-flex-basis: 100%;
 text-align: center;
+position: fixed;
 font-family: sans-serif;
 color: white;
 flex-direction: row;
 align-items: center;
 height: 100px;
-width: 100%
+width: 100%;
+z-index: 5
 }
 li{
+
   background-color: black;
 font-size: 20px;
 text-decoration: none;
 font-family: sans-serif;
 color: white;
-flex-basis: 25%;
 width: 25%
 }
  a{
-  flex-basis: 100%;
+   flex: 1 1 100%;
   color: white;
 width: 100%;
 text-decoration: none;
 }
 #menu{
   flex:1;
-  flex-basis: 100%;
   padding-right: 15px;
   padding-left: auto;
   color: white

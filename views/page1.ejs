@@ -11,37 +11,36 @@
 <%- include partials/_menu %>
 </head>
 
-  <body id="buttonWar">
-<div class="background">
-<img src="./partials/pictures/atomBomb.png" id="picWave" style="flex:1;display:none;flex-basis:100%;position:absolute;flex-shrink:2;height:100%; width:100%; opacity: 0.75; z-index:2">
-<img src="./partials/pictures/battle.jpg" class="front" style="flex:1;flex-basis:100%;height:100%;position:absolute; width:100%;z-index: 1">
+  <body id="background">
+    <img src="./partials/pictures/atomBomb.png" id="picWave" style="height:100%;display:none;position:absolute;height:100%; width:100%; opacity: 0.75; z-index:2;top:25px">
+    <img src="./partials/pictures/battle.jpg" class="front" style="height:100%;position:absolute; width:100%;z-index: 1; top25px;">
 
 
 
 
 <br>
+<div id="buttonControlsWrapper">
+<div id = "buttonControls">
 
-<section id="bombSection">
-    <div id="buttonWrap">
-<br>
-
-
-      <img style="display:none;flex-basis:7%;right:34%;position:absolute; opacity: .3" src="./partials/pictures/gren.gif" id="blast">
-   </div>
-</section>
-<section id = "buttonControls">
+  <!-- the two buttons on the panel - one decrepitates the other and the other blows up the background -->
   <div  id="butt1" class="myWarButton" >1</div>
 
       <div id="butt4"  class="myWarButton">3</div>
 
-</section>
-<div style="display:inline-block">
+
+<!-- the two buttons on the panel -->
+</div>
+<div id="weapons">
+
+  <img id="grenade" id="blast" src="/partials/pictures/grenade.gif">
 <div id="butt3"  class="unit" style="position:absolute;bottom:30px">
+
      <a  class="hover-box" href="#">
        <img style="position:relative; flex:1;z-index:4"src="./partials/pictures/landmine.jpg">
        <h2 style="background-image:url('./partials/pictures/explode2.png');background-repeat:no-repeat;z-index:4">boom</h2>
      </a>
 </div>
+
 </div>
 </div>
 
