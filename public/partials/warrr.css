@@ -2,31 +2,7 @@ body{
   background-color: rgb(100,100,100)
 }
 
-.myWarButton {
-  flex:3;
-  color: #CCBBE1;
-  font-size: 20px;
-  line-height: 23px;
-  border-radius: 22px;
-  font-family: "Trebuchet MS", Helvetica, sans-serif;
-  font-weight: 700;
-  text-decoration: none solid #444444;
-  font-style: normal;
-  font-variant: small-caps;
-  text-transform: capitalize;
-  background-image: radial-gradient(at center center, #1c6ea4 0%, #2388cb 60%, #144e75 100%);
-  box-shadow: black 19px 16px 52px 11px;
-  border: 2px dashed #1c6ea4;
-  width: 50%;
-  height: 50%;
-  padding: 70px;
-  text-align: center; }
 
-.myWarButton:hover {
-  border: 2px dashed #CCBBE1; }
-
-.myWarButton:active {
-  background: #CCBBE1; }
 
 #warScene{
 display: flex;
@@ -37,7 +13,8 @@ font-family: "Trebuchet MS", Helvetica, sans-serif;
 display: flex;
 flex-flow:row wrap;
 justify-content: flex-end;
-align-items:baseline;
+align-items:flex-start;
+flex-direction: row;
 top:25px;
 background: rgb(100,100,100);
 color: black;
@@ -61,13 +38,55 @@ background-repeat:no-repeat;
 }
 #buttonControls{
 flex: 1 1 30%;
+flex-direction: row;
 position: relative;
 margin: 13px;
 padding: 13px;
 z-index: 3;
 /* border: 1px solid black */
 }
+/* these are the controls */
+.myWarButton {
+  flex:1 1 26%;
+  color: #CCBBE1;
+  position: relative;
+  bottom: 80%;
+  left: 60%;
+  font-size: 20px;
+  line-height: 23px;
+  border-radius: 22px;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-weight: 700;
+  text-decoration: none solid #444444;
+  font-style: normal;
+  font-variant: small-caps;
+  text-transform: capitalize;
+  background-image: radial-gradient(at center center, #1c6ea4 0%, #2388cb 60%, #144e75 100%);
+  box-shadow: black 19px 16px 52px 11px;
+  border: 2px dashed #1c6ea4;
+  width: 50%;
+  height: 50%;
+  padding: 70px;
+  text-align: center; }
 
+.myWarButton:hover {
+  border: 2px dashed #CCBBE1; }
+
+.myWarButton:active {
+  background: #CCBBE1; }
+#butt1{
+flex:1;
+
+}
+#butt2{
+flex:1;
+
+}
+
+#butt4{
+flex:1;
+}
+/* these were the controls */
 #weapons{
   display: inline-flex;
 flex-direction: column-reverse;
@@ -93,20 +112,7 @@ width: 200px
 
 /* grenade picture series */
 
-/* these are the items on the button war page */
-#butt1{
-flex:1;
 
-}
-#butt2{
-flex:1;
-
-}
-
-#butt4{
-flex:1;
-flex-basis: 25%
-}
 #square{
   flex:1;
   position:relative;
@@ -160,6 +166,9 @@ top: 50%;
 left: 50%;
  }
 
+/* these are the items on the button war page */
+
+
 #bombSection{z-index: 3}
 
 
@@ -181,19 +190,15 @@ background: rgb(100,100,100);
 
 #butt1{
   flex:1;
-  flex-basis: 100%
 }
 #butt2{
   flex:1;
-  flex-basis: 100%
 }
 #butt3{
   display: none;
-  flex-basis: 100%
 }
 #butt4{
   flex:1;
-  flex-basis: 100%
 }
 /* grenade picture series */
 #square{
