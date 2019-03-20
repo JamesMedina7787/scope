@@ -8,41 +8,46 @@ body{
 display: flex;
 flex-wrap:wrap;
 }
-.background {
-font-family: "Trebuchet MS", Helvetica, sans-serif;
+.background{
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  color: black;
+  display: flex;
+  width:100%;
+  /* height: 800px; */
+  position: absolute;
+  height:900px;
+  z-index: 1;
+text-align: center;
+align-items:center;
+top:25px
+}
+#grenade{
+  display:none
+}
+#flex{
 display: flex;
-flex-flow:row wrap;
-justify-content: flex-end;
-align-items:flex-start;
-flex-direction: row;
-top:25px;
-background: rgb(100,100,100);
-color: black;
-
+flex-direction: column;
 }
 .bombSection{
 flex:1;
 border: 1px solid black;
 flex-basis: 25%;
-
+background-image:url('/partials/pictures/battle.jpg');
 background-repeat:no-repeat;
 
  background-color:"black";
 
 }
-/* these are the items on the button war page */
-#buttonControlsWrapper{
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
-}
 #buttonControls{
-flex: 1 1 30%;
+display: flex;
+position: absolute;
 flex-direction: row;
-position: relative;
+
 margin: 13px;
 padding: 13px;
 z-index: 3;
+left:0%;
+top: 88%;
 /* border: 1px solid black */
 }
 /* these are the controls */
@@ -87,32 +92,6 @@ flex:1;
 flex:1;
 }
 /* these were the controls */
-#weapons{
-  display: inline-flex;
-flex-direction: column-reverse;
-align-items: baseline;
-width: 500px;
-height:100px;
-}
-
-/* grenade picture series */
-#grenade{flex: 1 0 30%;
-  right:34%;
-  width: 180px;
-  top:50%;
-  position:absolute;
-z-index: 9
-}
-#square{
-width: 200px
-}
-#blast{
-width: 200px
-}
-
-/* grenade picture series */
-
-
 #square{
   flex:1;
   position:relative;
@@ -122,7 +101,15 @@ width: 200px
 }
 
 
+/* grenade picture series */
+#square{
+width: 200px
+}
+#blast{
+width: 200px
+}
 
+/* grenade picture series */
 
 .unit {
 width: 250px;
@@ -164,12 +151,10 @@ transform: scale(1); }
 position: absolute;
 top: 50%;
 left: 50%;
- }
-
-/* these are the items on the button war page */
-
+transform: translate(-50%, -50%); }
 
 #bombSection{z-index: 3}
+
 
 
 @media screen and (max-width:800px){
@@ -179,23 +164,31 @@ background: rgb(100,100,100);
 }
   .background{
     font-family: "Trebuchet MS", Helvetica, sans-serif;
-    display: flex;
-    flex-flow:row wrap;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items:baseline;
-    top:25px;
     color: black;
+    display: flex;
+    width:100%;
+    /* height: 800px; */
+    position: absolute;
+    height:900px;
+    z-index: 1;
+  text-align: center;
+  align-items:center;
+  top:25px
   }
-
+#grenade{
+  display: none
+}
 #butt1{
   flex:1;
+
 }
 #butt2{
   flex:1;
+
 }
 #butt3{
   display: none;
+
 }
 #butt4{
   flex:1;
@@ -260,7 +253,8 @@ width:100%;
     transform: translate(-50%, -50%); }
 
     .myWarButton {
-display:block;
+      flex:1 1 26%;
+      position: relative;
       color: #CCBBE1;
       font-size: 12px;
       line-height: 3em;
@@ -275,9 +269,7 @@ display:block;
       background-image: radial-gradient(at center center, #1c6ea4 0%, #2388cb 60%, #144e75 100%);
       box-shadow: black .5%;
       border: .5px dashed #1c6ea4;
-flex-basis: 15%;
       height: 13%;
-      left:10%;
       padding: .5px;
       text-align: center; }
 
@@ -287,17 +279,12 @@ flex-basis: 15%;
     .myWarButton:active {
       background: #CCBBE1; }
 #buttonControls{
-  flex:1;
-  position: relative;
-   flex-direction: row;
+  display: flex;
+  position: absolute;
+   flex-direction: column;
    width:100%;
-flex-basis: 100%;
-height: 500px;
-z-index:4;
-top:69%;
-right:4%
-}
-#grenade{
-  display: none
-}
+height: 300px;
+z-index:3;
+top:50%;
+right:40%
 }
