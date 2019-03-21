@@ -20,6 +20,10 @@ fieldset{
   background-repeat:repeat;
   font-size: 2em
   }
+  #topContainer{
+    background-color: black;
+    opacity: .8
+  }
  span {
  color: #475780; }
 
@@ -93,7 +97,7 @@ fieldset{
  display: block;
  width: 300px;
  margin: 0 auto;
- opacity: 0;
+
  transition: all 200ms ease-in; }
 
 .js-pictureFun-animate {
@@ -172,17 +176,16 @@ fieldset{
 
 #schedule-text {
   flex:1;
-  flex-basis:9%;
-  width:200px;
- margin: 0% 0px 2px 0px;
+ flex-basis:9%;
+ width:200px;
+ margin: 2px 0px 2px 0px;
  font-size: 30px;
  font: impact;
  font-weight: bold;
  font-style: oblique;
- color: #265e21;
+ color: rgb(90,220,0);
  background-color: #d24659;
  padding:.1em;
- opacity: .5;
  z-index: 2;
  border: 3px solid white
  }
@@ -193,7 +196,7 @@ fieldset{
  color: #475780;
  float: left;
  font-family: "Trebuchet MS", Helvetica, sans-serif;
-opacity: .6;
+opacity: .8;
 }
 #schedule-text label.active{
   opacity:.9;
@@ -258,16 +261,29 @@ background-color: white}
  text-align: center;
 border: 3px solid black;
 background-color: white;
-opacity: .6;
+opacity: .8;
 z-index: 2}
 
 #header-reg {
  color: #475780;
  font-size: 1.5em;
- margin-left: 20p%;
+ margin-left: 20%;
  border: 3px solid black;
+ opacity: 1
 }
-
+#Pineapples{
+  opacity: 1;
+  backface-visibility: visible;
+}
+#Onion{
+  opacity:1
+}
+#Pepperoni{
+  opacity: 1
+}
+#Mushrooms{
+  opacity: 1
+}
 .form-group {
  margin: auto }
 

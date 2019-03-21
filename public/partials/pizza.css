@@ -172,6 +172,7 @@ left: 20%;
 bottom: 50;
 visibility: hidden
 }
+
 @media screen and (max-width:700px) {
 .toppings{
   flex: 1;
