@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/JamesMedina7787/scope#readme",
   "dependencies": {
-    "async": "^2.6.1",
+    "async": "^3.2.2",
     "body-parser": "^1.18.3",
     "ejs": "^2.6.1",
     "event": "^1.0.0",
